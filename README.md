@@ -2,7 +2,7 @@
 
 ## **Purpose**
 
-The purpose of this project is to make a simple app to look for Prime Numbers.
+- The purpose of this project is to make a simple app to look for Prime Numbers.
 
 ## **Capabilities**
 
