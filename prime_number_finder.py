@@ -47,7 +47,7 @@ def eleven_check_func(number):
     return new_number_3
 
 
-# Function to check for semiprimes
+# Function to check for Semiprimes
 def semiprime_check_func(number):
     ## Local Variables / Local Main Code
     for prime in prime_list:
