@@ -2,8 +2,10 @@
 ## Aside from 2, no even number is Prime
 ## If the sum of the digits is divisible by 3, then the number will be divisble by 3
 ## If the number end with 0 or 5, then it will be divisible by 5
-## Double the last digit and subtract it from the rest of the number... If the answer is divisible by 7, the original number will be divisible by 7... For instance, if the number is 161, take the last digit (1), double it, then subtract it from the rest of the number (16)... If the answer is divisible by 7, then so is the original number... In this case the answer is 14, 14 is divisible by 7, so 161 is also.
-## Add alternate digits and subtract it from the difference of the next sum of alternate digits... For instance, if the number is 574652, add 5+4+5=14 and 7+6+2=15... If the difference i.e. 1 is divisible by 11, then the number will be divisible by 11... In this case, clearly the number is not divisible by 11.
+## Double the last digit and subtract it from the rest of the number... If the answer is divisible by 7, the original number will be divisible by 7... For instance, if the number is 161, take the last digit (1), double it, then subtract it from the rest of the number (16)... If the answer is divisible by 7, then so is the original number... In this case the answer is 14, 14 is divisible by 7, so 161 is also
+## Add alternate digits and subtract it from the difference of the next sum of alternate digits... For instance, if the number is 574652, add 5+4+5=14 and 7+6+2=15... If the difference i.e. 1 is divisible by 11, then the number will be divisible by 11... In this case, clearly the number is not divisible by 11
+## Semiprimes are not true Primes and need to be ruled out by checking a number against the square of each Prime that was already added to the prime list... For example, 169 is the product of 13*13, so it's not Prime, it's Semiprime
+## Squarefree Primes are an extension of Semiprimes where the number is the product of two unique Primes from the Prime list... For example, 221 is the product of 13*17, so it's not Prime, it's a Squarefree Prime
 
 
 # Function to determine the sum of the digits of the number
