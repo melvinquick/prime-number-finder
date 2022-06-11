@@ -71,7 +71,7 @@ def squarefree_prime_check_func(number):
     return False
 
 
-# Funtion to determine if a number is Prime or not
+# Function to determine if a number is Prime or not
 def prime_check_func(number):
     ## Local Variables
     digit_sum = 0
@@ -115,7 +115,7 @@ def prime_check_func(number):
     return True
 
 
-# Funtion for getting the last number you checked and starting up the finder from there
+# Function for getting the last number you checked and starting up the finder from there
 def get_startup_number_func():
     ## Local Variables / Local Main Code
     startup_number_file = open("current_number.txt", "r")
@@ -124,7 +124,7 @@ def get_startup_number_func():
     return startup_number
 
 
-# Funtion for setting the last number you checked
+# Function for setting the last number you checked
 def set_ending_number_func(number):
     ## Local Variables / Local Main Code
     ending_number_file = open("current_number.txt", "w")
