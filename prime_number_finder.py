@@ -142,6 +142,7 @@ def store_prime_func(number):
     new_prime_file.close()
     return
 
+
 # Function to retrieve the current Prime List at the beginning of code execution
 def get_prime_list_func():
     ## Local Variables
@@ -154,6 +155,7 @@ def get_prime_list_func():
     prime_numbers_file.close()
     return current_prime_list
 
+
 # Global Variables
 starting_prime_list = [2,3,5,7,11,13,17,19,23,29]
 prime_list = get_prime_list_func()
@@ -163,6 +165,7 @@ is_prime = False
 is_semiprime = False
 is_squarefree_prime = False
 keep_iterating = True
+
 
 # Main Code
 while keep_iterating:
