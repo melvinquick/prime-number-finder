@@ -49,7 +49,10 @@ def eleven_check_func(number):
 
 # Function to check for Semiprimes
 def semiprime_check_func(number):
-    ## Local Variables / Local Main Code
+    ## Local/Global Variables
+    global prime_list
+
+    ##Local Main Code
     for prime in prime_list:
         if number == prime * prime:
             return True
@@ -58,8 +61,9 @@ def semiprime_check_func(number):
 
 # Function to check for Squarefree Primes
 def squarefree_prime_check_func(number):
-    ## Local Variables
+    ## Local/Global Variables
     counter = 0
+    global prime_list
 
     ## Local Main Code
     for prime in prime_list:
@@ -73,10 +77,15 @@ def squarefree_prime_check_func(number):
 
 # Function to determine if a number is Prime or not
 def prime_check_func(number):
-    ## Local Variables
+    ## Local/Global Variables
     digit_sum = 0
     seven_check = 0
     eleven_check = 0
+    global starting_prime_list
+    global prime_list
+    global end_digit_fail_list
+    global is_semiprime
+    global is_squarefree_prime
 
     ## Local Main Code
     if number in starting_prime_list:
