@@ -177,11 +177,12 @@ keep_iterating = True
 
 
 # Main Code
-while keep_iterating:
-    is_prime = prime_check_func(current_number)
+if __name__ == "__main__":
+    while keep_iterating:
+        is_prime = prime_check_func(current_number)
 
-    if is_prime == True:
-        store_prime_func(current_number)
+        if is_prime == True:
+            store_prime_func(current_number)
 
-    current_number += 1
-    set_ending_number_func(current_number)
+        current_number += 1
+        set_ending_number_func(current_number)
