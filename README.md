@@ -11,9 +11,10 @@
 - Gets rid of Squarefree Primes
 - Stores found Primes in a text file called "prime_numbers.txt" (this file is pre-made and starts as empty as I didn't include code to create it)
 - Stores the number that you were on before terminating the program in a file called "current_number.txt" (this file is pre-made and starts with just 2 as the value [to get the program off and running] as I didn't include code to create it)
-    - If you'd like to start from a specific number, you can theoretically do that... Here's how you'd go about it:
-        - Change the number in the current_number.txt file to whatever you want to start at
-        - In the prime_numbers.txt file, you would have to add in every Prime Number up until your starting number (one number per line)
+  - If you'd like to start from a specific number, you can theoretically do that... Here's how you'd go about it:
+    - Change the number in the current_number.txt file to whatever you want to start at
+    - In the prime_numbers.txt file, you would have to add in every Prime Number up until your starting number (one number per line)
 
 ## **Notes**
+
 - I made this for fun in my spare time to have a crack at finding the next elusive Prime Number!
