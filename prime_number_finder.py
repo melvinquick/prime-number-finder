@@ -8,6 +8,18 @@
 # Squarefree Primes are an extension of Semiprimes where the number is the product of two unique Primes from the Prime list... For example, 221 is the product of 13*17, so it's not Prime, it's a Squarefree Prime
 
 
+# =========
+# Libraries
+# =========
+
+import os
+import sys
+
+
+# =========
+# Functions
+# =========
+
 # Function to determine the sum of the digits of the number
 def digit_sum_func(number):
     # Local Variables
@@ -19,13 +31,11 @@ def digit_sum_func(number):
         digit_sum += int(digit)
     return digit_sum
 
-
 # Function to check last digit of the number
 def last_digit_func(number):
     # Local Variables / Local Main Code
     last_digit = int(str(number)[-1:])
     return last_digit
-
 
 # Function to check for the divisible by 7 condition
 def seven_check_func(number):
@@ -34,7 +44,6 @@ def seven_check_func(number):
     new_number_1 = int(str(number)[:-1])
     new_number_2 = new_number_1 - (2 * last_digit)
     return new_number_2
-
 
 # Function to check for the divisible by 11 condition
 def eleven_check_func(number):
@@ -46,7 +55,6 @@ def eleven_check_func(number):
     new_number_3 = abs(new_number_1 - new_number_2)
     return new_number_3
 
-
 # Function to check for Semiprimes
 def semiprime_check_func(number):
     # Local/Global Variables
@@ -57,7 +65,6 @@ def semiprime_check_func(number):
         if number == prime * prime:
             return True
     return False
-
 
 # Function to check for Squarefree Primes
 def squarefree_prime_check_func(number):
@@ -73,7 +80,6 @@ def squarefree_prime_check_func(number):
                 return True
             counter += 1
     return False
-
 
 # Function to determine if a number is Prime or not
 def prime_check_func(number):
@@ -123,34 +129,30 @@ def prime_check_func(number):
 
     return True
 
-
 # Function for getting the last number you checked and starting up the finder from there
 def get_startup_number_func():
     # Local Variables / Local Main Code
-    startup_number_file = open("current_number.txt", "r")
+    startup_number_file = open(os.path.join(sys.path[0], "current_number.txt"), "r")
     startup_number = int(startup_number_file.read())
     startup_number_file.close()
     return startup_number
 
-
 # Function for setting the last number you checked
 def set_ending_number_func(number):
     # Local Variables / Local Main Code
-    ending_number_file = open("current_number.txt", "w")
+    ending_number_file = open(os.path.join(sys.path[0], "current_number.txt"), "w")
     ending_number_file.write(str(number))
     ending_number_file.close()
     return
 
-
 # Function to store a found Prime in a file
 def store_prime_func(number):
     # Local Variables / Local Main Code
-    new_prime_file = open("prime_numbers.txt", "a")
+    new_prime_file = open(os.path.join(sys.path[0], "prime_numbers.txt"), "a")
     new_prime_file.write(str(number))
     new_prime_file.write("\n")
     new_prime_file.close()
     return
-
 
 # Function to retrieve the current Prime List at the beginning of code execution
 def get_prime_list_func():
@@ -158,14 +160,16 @@ def get_prime_list_func():
     current_prime_list = []
 
     # Local Main Code
-    prime_numbers_file = open("prime_numbers.txt", "r")
+    prime_numbers_file = open(os.path.join(sys.path[0], "prime_numbers.txt"), "r")
     for prime in prime_numbers_file:
         current_prime_list.append(int(prime))
     prime_numbers_file.close()
     return current_prime_list
 
 
+# ================
 # Global Variables
+# ================
 starting_prime_list = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
 prime_list = get_prime_list_func()
 end_digit_fail_list = [0, 2, 4, 5, 6, 8]
@@ -176,7 +180,9 @@ is_squarefree_prime = False
 keep_iterating = True
 
 
+# =========
 # Main Code
+# =========
 if __name__ == "__main__":
     while keep_iterating:
         is_prime = prime_check_func(current_number)
