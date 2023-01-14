@@ -1,4 +1,4 @@
-# Python Prime Number Finder
+# Prime Number Finder
 
 ## **Purpose**
 
