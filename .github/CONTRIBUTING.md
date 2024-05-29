@@ -1,4 +1,4 @@
-## How to contribute to the Windows Setup Script
+## How to contribute to the Prime Number Finder Project
 
 #### Did you find a bug?
 
