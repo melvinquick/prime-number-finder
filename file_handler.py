@@ -8,7 +8,7 @@ class FileHandler:
         self.prime_list = []
 
     def get_file_path(self, filename):
-        return os.path.join(os.path.dirname(__file__), self.filename)
+        return os.path.join(os.path.dirname(__file__), filename)
 
     def load_prime_numbers(self):
         with open(self.prime_numbers_file, "r") as f:
@@ -16,7 +16,7 @@ class FileHandler:
                 self.prime_list.append(int(prime))
             return self.prime_list
 
-    def store_found_prime(self, prime):
+    def save_found_prime(self, prime):
         with open(self.prime_numbers_file, "a") as f:
             f.write(f"{str(prime)}\n")
             return
