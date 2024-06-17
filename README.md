@@ -17,4 +17,4 @@
 
 ## **Notes**
 
-- I made this for fun in my spare time to have a crack at finding the next elusive Prime Number!
+- **THIS REPO IS CURRENTLY UNDERGOING A FULL OVERHAUL AND BECAUSE OF THIS IT CAN AND WILL BE BROKEN AT SOME POINTS!**
