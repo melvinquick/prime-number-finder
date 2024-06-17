@@ -7,8 +7,6 @@
 # Semiprimes are not true Primes and need to be ruled out by checking a number against the square of each Prime that was already added to the prime list... For example, 169 is the product of 13*13, so it's not Prime, it's Semiprime
 # Squarefree Primes are an extension of Semiprimes where the number is the product of two unique Primes from the Prime list... For example, 221 is the product of 13*17, so it's not Prime, it's a Squarefree Prime
 
-import os, sys
-
 from file_handler import FileHandler
 
 
