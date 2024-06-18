@@ -1,4 +1,4 @@
-import os, yaml
+import os
 
 
 class FileHandler:
