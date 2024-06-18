@@ -16,6 +16,8 @@
 
 #### Do you intend to add a new feature or change an existing one?
 
+- The [Project Goals](https://github.com/users/melvinquick/projects/8/views/1) Document is a great place to start! If you would like to assist, please take a look here first!
+
 - Consider [opening a new feature request](https://github.com/melvinquick/prime-number-finder/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=).
 
 - If you want to try your hand at implementing the feature, [open a pull request](https://github.com/melvinquick/prime-number-finder/compare) once you have a working and tested version.
