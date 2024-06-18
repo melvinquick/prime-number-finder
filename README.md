@@ -1,20 +1,21 @@
-# Prime Number Finder
+<p align="center"> <img src="/images/scramble-generator-cube-with-text.png" /> </p>
 
-## **Purpose**
+## Donations
 
-- The purpose of this project is to make a simple app to look for Prime Numbers.
+[<img src="https://img.shields.io/badge/Sponsor-%E2%99%A5-gray?style=for-the-badge&logo=GitHub" alt="Static Badge" width="165" height="40">](https://github.com/sponsors/melvinquick) <a href="https://www.buymeacoffee.com/KingKairos" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 165px !important;" ></a>
 
-## **Capabilities**
+## Purpose
 
-- Finds primes indefinitely (it runs until you kill it with a keyboard interrupt [ctrl+c] on Windows while in terminal window)
-- Gets rid of Semiprimes
-- Gets rid of Squarefree Primes
-- Stores found Primes in a text file called "prime_numbers.txt" (this file is pre-made and starts as empty as I didn't include code to create it)
-- Stores the number that you were on before terminating the program in a file called "current_number.txt" (this file is pre-made and starts with just 2 as the value [to get the program off and running] as I didn't include code to create it)
-  - If you'd like to start from a specific number, you can theoretically do that... Here's how you'd go about it:
-    - Change the number in the current_number.txt file to whatever you want to start at
-    - In the prime_numbers.txt file, you would have to add in every Prime Number up until your starting number (one number per line)
+The purpose of this project is to make a simple app to look for Prime Numbers and to check and see if any particular number you desire is prime.
 
-## **Notes**
+## Present State
 
-- **THIS REPO IS CURRENTLY UNDERGOING A FULL OVERHAUL AND BECAUSE OF THIS IT CAN AND WILL BE BROKEN AT SOME POINTS!**
+Currently there is no GUI for this app. You can iterate indefinitely and it will find more prime numbers and add them to the prime_number.txt file, or you can check a specific number. If you check a specific number it will check and see if you've already iterated to that point and if not it will iterate to there. Once it knows you've iterated to at least that number it will check the prime number list and let you know if your number is prime or not.
+
+## Pipeline
+
+Please check the project goals link below for a complete picture, but in short, I am going to be developing a simple GUI for this app to make it easier to use.
+
+## Useful Information
+
+- [Project Goals](https://github.com/users/melvinquick/projects/8/views/1)
