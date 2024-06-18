@@ -90,6 +90,12 @@ class PrimeChecker:
 
         return True
 
+    def number_check(self, number):
+        if number in self.prime_list:
+            print(f"{number} is prime!")
+        else:
+            print(f"{number} is not prime!")
+
 
 def main():
     file_handler = FileHandler()
@@ -98,15 +104,38 @@ def main():
     prime_checker = PrimeChecker(prime_list)
     is_prime = False
     keep_iterating = True
+    check_to_number = int()
+    check_or_iterate = str(
+        input(
+            "Would you like to (iterate) to find new primes for your prime library or (check) to see if a specific number is prime?: "
+        )
+    )
 
-    while keep_iterating:
-        is_prime = prime_checker.prime_check(current_number)
+    if check_or_iterate.lower() == "iterate":
+        while keep_iterating:
+            is_prime = prime_checker.prime_check(current_number)
 
-        if is_prime == True:
-            file_handler.save_found_prime(current_number)
+            if is_prime == True:
+                file_handler.save_found_prime(current_number)
 
-        current_number += 1
-        file_handler.save_current_number(current_number)
+            current_number += 1
+            file_handler.save_current_number(current_number)
+
+    elif check_or_iterate.lower() == "check":
+        check_to_number = int(
+            input("Enter the number you'd like to check the primality of: ")
+        )
+
+        while check_to_number > current_number:
+            is_prime = prime_checker.prime_check(current_number)
+
+            if is_prime == True:
+                file_handler.save_found_prime(current_number)
+
+            current_number += 1
+            file_handler.save_current_number(current_number)
+
+        prime_checker.number_check(check_to_number)
 
 
 if __name__ == "__main__":
