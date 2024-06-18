@@ -7,10 +7,6 @@ class FileHandler:
         self.current_number_file = self.get_file_path("current_number.txt")
         self.prime_list = []
 
-    def load_yaml_file(self, filename):
-        with open(self.get_file_path(filename), "r") as f:
-            return yaml.safe_load(f)
-
     def get_file_path(self, filename):
         return os.path.join(os.path.dirname(__file__), filename)
 
