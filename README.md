@@ -8,6 +8,10 @@
 
 The purpose of this project is to make a simple app to look for Prime Numbers and to check and see if any particular number you desire is prime.
 
+## App Showcase
+
+![app-showcase.gif](gifs/app-showcase.gif)
+
 ## Present State
 
 Currently there is no GUI for this app. You can iterate indefinitely and it will find more prime numbers and add them to the prime_number.txt file, or you can check a specific number. If you check a specific number it will check and see if you've already iterated to that point and if not it will iterate to there. Once it knows you've iterated to at least that number it will check the prime number list and let you know if your number is prime or not.
