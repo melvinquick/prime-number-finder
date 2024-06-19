@@ -22,6 +22,9 @@ icon = ConfigHandler("images/prime-number-finder.ico")
 config_file = ConfigHandler("configs/config.yml")
 config = config_file.load_yaml_file()
 
+themes_file = ConfigHandler("configs/themes.yml")
+themes = themes_file.load_yaml_file()
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -49,11 +52,19 @@ class MainWindow(QMainWindow):
         self.iterate_timer = QTimer(self)
         self.iterate_timer.setInterval(10)
 
-        self.most_recent_number_text = QLabel(f"Most recent number checked: ", alignment=Qt.AlignmentFlag.AlignLeft)
-        self.most_recent_number = QLabel(str(self.current_number), alignment=Qt.AlignmentFlag.AlignRight)
+        self.most_recent_number_text = QLabel(
+            f"Most recent number checked: ", alignment=Qt.AlignmentFlag.AlignLeft
+        )
+        self.most_recent_number = QLabel(
+            str(self.current_number), alignment=Qt.AlignmentFlag.AlignRight
+        )
 
-        self.most_recent_prime_text = QLabel(f"Most recent prime found: ", alignment=Qt.AlignmentFlag.AlignLeft)
-        self.most_recent_prime = QLabel(str(self.prime_list[-1]), alignment=Qt.AlignmentFlag.AlignRight)
+        self.most_recent_prime_text = QLabel(
+            f"Most recent prime found: ", alignment=Qt.AlignmentFlag.AlignLeft
+        )
+        self.most_recent_prime = QLabel(
+            str(self.prime_list[-1]), alignment=Qt.AlignmentFlag.AlignRight
+        )
 
         self.check_button = QPushButton("Check for Primality")
 
@@ -104,6 +115,8 @@ class MainWindow(QMainWindow):
 
         self.setCentralWidget(self.gui)
 
+        self.toggle_theme()
+
     def iterate_click(self):
         self.keep_iterating = not self.keep_iterating
         if self.keep_iterating:
@@ -129,7 +142,7 @@ class MainWindow(QMainWindow):
     def check_click(self):
         self.check_number = int(self.check_input.text())
         self.check_button.setText("Checking")
-        
+
         if self.check_number <= self.current_number:
             if self.check_number in self.prime_list:
                 self.check_output.setText("is prime!")
@@ -139,7 +152,7 @@ class MainWindow(QMainWindow):
             self.check_timer.stop()
         else:
             self.check_timer.start()
-    
+
     def check_iterate(self):
         if self.check_number > self.current_number:
             is_prime = self.prime_checker.prime_check(self.current_number)
@@ -152,10 +165,24 @@ class MainWindow(QMainWindow):
             self.current_number += 1
             self.file_handler.save_current_number(self.current_number)
             self.most_recent_number.setText(str(self.current_number))
-        
+
         self.check_click()
-            
-        
+
+    def toggle_theme(self):
+        self.theme = "Everforest-Light"
+        self.apply_theme(self)
+        for widget in self.findChildren(QWidget):  # * Apply theme to all child widgets
+            self.apply_theme(widget)
+
+    def apply_theme(self, widget):
+        self.theme_stylesheet = f"""
+            background-color: {themes[self.theme]['background-color']};
+            color: {themes[self.theme]['color']};
+            border: {themes[self.theme]['border']};
+            border-radius: {themes['general']['border-radius']};
+            padding: {themes['general']['padding']};
+            """
+        widget.setStyleSheet(self.theme_stylesheet)
 
 
 def main():
