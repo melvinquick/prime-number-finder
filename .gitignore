@@ -1,4 +1,5 @@
 ignore/
 env312/
+__pychache__/
 prime_checker_dev.py
 *bak*
