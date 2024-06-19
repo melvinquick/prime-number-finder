@@ -12,14 +12,6 @@ The purpose of this project is to make a simple app to look for Prime Numbers an
 
 ![app-showcase.gif](gifs/app-showcase.gif)
 
-## Present State
-
-Currently there is no GUI for this app. You can iterate indefinitely and it will find more prime numbers and add them to the prime_number.txt file, or you can check a specific number. If you check a specific number it will check and see if you've already iterated to that point and if not it will iterate to there. Once it knows you've iterated to at least that number it will check the prime number list and let you know if your number is prime or not.
-
-## Pipeline
-
-Please check the project goals link below for a complete picture, but in short, I am going to be developing a simple GUI for this app to make it easier to use.
-
 ## Useful Information
 
 - [Project Goals](https://github.com/users/melvinquick/projects/8/views/1)
