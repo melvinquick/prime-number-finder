@@ -1,4 +1,4 @@
-<p align="center"> <img src="/images/scramble-generator-cube-with-text.png" /> </p>
+<p align="center"> <img src="/images/prime-number-finder.png" /> </p>
 
 ## Donations
 
